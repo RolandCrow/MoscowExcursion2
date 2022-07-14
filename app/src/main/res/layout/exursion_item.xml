@@ -26,6 +26,7 @@
             android:layout_height="200dp"
             android:imageUrl="@{excursion.img}"
             android:scaleType="fitXY"
+            android:visibility="visible"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +40,7 @@
             android:background="#afff"
             android:gravity="center"
             android:text="@{excursion.title}"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/exc_image"
             app:layout_constraintEnd_toEndOf="@+id/exc_image"
             app:layout_constraintStart_toStartOf="@+id/exc_image" />

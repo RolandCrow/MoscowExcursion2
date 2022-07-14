@@ -1,5 +1,6 @@
 package com.example.moscowexcursion2.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -54,11 +55,12 @@ class FirstListFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("FragmentLiveDataObserve")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        listFragmentViewModel = ViewModelProvider(this)[ListFragmentViewModel::class.java]
-        listFragmentViewModel.excursion.observe(viewLifecycleOwner, excursionDataObserver)
-        listFragmentViewModel.loading.observe(viewLifecycleOwner, loadingObserver)
+        listFragmentViewModel = ViewModelProvider(this).get(ListFragmentViewModel::class.java)
+        listFragmentViewModel.excursion.observe(this, excursionDataObserver)
+        listFragmentViewModel.loading.observe(this, loadingObserver)
         listFragmentViewModel.refresh()
         binding.exursionImages.apply {
             layoutManager = GridLayoutManager(context,1 )

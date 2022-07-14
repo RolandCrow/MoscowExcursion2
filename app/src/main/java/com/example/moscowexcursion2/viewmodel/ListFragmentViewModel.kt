@@ -53,7 +53,7 @@ class ListFragmentViewModel(application: Application) : AndroidViewModel(applica
                     override fun onError(e: Throwable) {
                         loadError.value = true
                         loading.value = false
-                        excursion.value = null
+                       // excursion.value = null
                     }
 
                 })

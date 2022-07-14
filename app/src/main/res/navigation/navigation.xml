@@ -5,15 +5,7 @@
     android:id="@+id/navigation"
     app:startDestination="@id/listFragment">
 
-    <fragment
-        android:id="@+id/listFragment"
-        android:name="com.example.moscowexcursion2.fragment.FirstListFragment"
-        android:label="Excursions"
-        tools:layout="@layout/fragment_list">
-        <action
-            android:id="@+id/actionGoToDetails"
-            app:destination="@id/detailsFragment" />
-    </fragment>
+
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.moscowexcursion2.fragment.FirstDetailsFragment"
@@ -25,6 +17,17 @@
         <argument
             android:name="data"
             app:argType="com.example.moscowexcursion2.model.Data" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.moscowexcursion2.fragment.FirstListFragment"
+        android:label="Excursions"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/actionGoToDetails"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
 </navigation>
