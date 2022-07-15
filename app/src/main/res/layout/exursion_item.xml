@@ -8,23 +8,23 @@
             type="com.example.moscowexcursion2.model.Data" />
 
         <variable
-            name="onClick"
-            type="com.example.moscowexcursion2.util.OnExcursionClick" />
+            name="handler"
+            type="com.example.moscowexcursion2.util.Handler" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/clickExursion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{onClick::onClick}"
-        android:tag="@{excursion.title}">
+        android:paddingHorizontal="20dp"
+        android:onClick="@{(view) -> handler.onClick(excursion,context)}"
+     >
 
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/exc_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:imageUrl="@{excursion.img}"
+            app:setImageUrl="@{excursion.img}"
             android:scaleType="fitXY"
             android:visibility="visible"
             android:src="@mipmap/ic_launcher"
@@ -33,17 +33,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/exc_title"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:background="#afff"
-            android:gravity="center"
             android:text="@{excursion.title}"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/exc_image"
-            app:layout_constraintEnd_toEndOf="@+id/exc_image"
-            app:layout_constraintStart_toStartOf="@+id/exc_image" />
+            android:textColor="@color/white"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

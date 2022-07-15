@@ -8,6 +8,6 @@ data class Galleries(
     val value: List<String>,
     val ordering: Int,
     val type: String,
-    val captions: String?
+    val captions: String? = null
 
 ): Parcelable

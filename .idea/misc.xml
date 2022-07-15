@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/activity_excursion_point.xml" value="0.1" />
+        <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/activity_exursion.xml" value="0.1" />
+        <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/excursion_route.xml" value="0.17639902676399027" />
         <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/exursion_item.xml" value="0.2622798887859129" />
         <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/fragment_details.xml" value="0.12817028985507245" />
         <entry key="..\:/Users/rolan/StudioProjects/MoscowExcursion2/app/src/main/res/layout/fragment_list.xml" value="0.12817028985507245" />

@@ -14,8 +14,8 @@ data class Data(
     val img: String,
     val duration: Int,
     val authors: List<Authors>,
-    val authorCompany: List<Authors>,
-    val routes: List<Routes>?,
+    val authorCompany: Authors,
+    val routes: ArrayList<Routes>,
 
 
 

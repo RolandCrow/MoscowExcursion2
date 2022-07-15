@@ -11,6 +11,6 @@ data class Routes(
     val type: String,
     val points: List<Points>,
     val textContents: List<TextContents>?,
-    val media: List<Media>?,
-    val galleries: List<Galleries?>,
+    val media: List<Media>,
+    val galleries: List<Galleries>,
 ) : Parcelable

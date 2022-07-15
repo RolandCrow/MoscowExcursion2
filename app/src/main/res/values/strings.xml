@@ -4,4 +4,17 @@
     <string name="img">Обзорное фото экскурсии</string>
     <string name="exc_title">Описание экскурсии</string>
     <string name="desc">Описание</string>
+    <string name="_1">1</string>
+    <string name="type">Тип</string>
+    <string name="time">Время в пути</string>
+    <string name="min">мин</string>
+    <string name="authors">Авторы</string>
+    <string name="rout">Маршруты</string>
+    <string name="start_to_walk">Начать прогулку</string>
+    <string name="moscow">Музей Москвы</string>
+    <string name="pedestrian">Пешеходная</string>
+    <string name="project">Проект</string>
+    <string name="back">Назад</string>
+    <string name="onward">Далее</string>
+    <string name="photo">Фото</string>
 </resources>
