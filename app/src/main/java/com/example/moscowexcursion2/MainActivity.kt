@@ -2,16 +2,20 @@ package com.example.moscowexcursion2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.moscowexcursion2.adapters.ExcursionPointAdapter
 import com.example.moscowexcursion2.databinding.ActivityMainBinding
 import com.example.moscowexcursion2.model.InfoExcursion
 import com.example.moscowexcursion2.viewmodel.MainViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
- private val mainViewModel by viewModel<MainViewModel>()
+ private val mainViewModel : MainViewModel by viewModels()
+
 
 
 
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         setupObserver()
 
     }
+
+
 
 
     private fun setupObserver() {
