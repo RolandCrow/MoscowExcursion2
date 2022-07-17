@@ -2,6 +2,7 @@ package com.example.moscowexcursion2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.example.moscowexcursion2.adapters.ExcursionPointAdapter
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupObserver() {
         mainViewModel.excursionItem.observe(this) {
+            Log.i("Successckvjv[owdv[kdv[k", it.data.toString())
             it.data?.let { main ->
                 retrieveList(main)
             }
