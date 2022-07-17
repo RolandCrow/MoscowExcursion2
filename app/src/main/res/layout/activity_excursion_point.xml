@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout >
 
 
     <data>
@@ -9,7 +7,7 @@
             name="adapter"
             type="com.example.moscowexcursion2.adapters.ExcursionAdapter" />
         <variable
-            name="data"
+            name="excursion"
             type="com.example.moscowexcursion2.model.Data" />
 
         <variable
@@ -20,6 +18,9 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
     android:padding="15dp"
     tools:context=".ExcursionPointActivity"
     android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="@{data.title}"
+            android:text="@{excursion.title}"
             android:textColor="@color/black"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="@{data.description}"
+            android:text="@{excursion.description}"
             android:layout_marginTop="20dp"
             android:textColor="@color/black"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -139,7 +140,7 @@
             android:id="@+id/timeInMin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{Integer.toString(data.duration)}"
+            android:text="@{Integer.toString(excursion.duration)}"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginVertical="5dp"
@@ -174,7 +175,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
             app:roundedCornerRadius="30dp"
-            app:setImageUrl="@{data.authors[0].img}"
+            app:setImageUrl="@{excursion.authors[0].img}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/author_title"/>
         <TextView
@@ -182,7 +183,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@{data.authors[0].title}"
+            android:text="@{excursion.authors[0].title}"
             app:layout_constraintLeft_toRightOf="@id/author_img"
             app:layout_constraintTop_toBottomOf="@id/author_title"/>
 
@@ -190,7 +191,7 @@
             android:id="@+id/author_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.authors[0].description}"
+            android:text="@{excursion.authors[0].description}"
             android:layout_marginTop="5dp"
             app:layout_constraintLeft_toRightOf="@+id/author_img"
             app:layout_constraintTop_toBottomOf="@+id/author_name"/>
@@ -220,7 +221,7 @@
             android:layout_height="wrap_content"
             android:text="@string/start_to_walk"
             android:textColor="@color/white"
-            android:onClick="@{(view) -> handler.onClickToStart(data.routes, context)}"
+            android:onClick="@{(view) -> handler.onClickToStart(excursion.routes, context)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>

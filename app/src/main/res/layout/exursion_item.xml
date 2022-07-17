@@ -20,6 +20,7 @@
         android:onClick="@{(view) -> handler.onClick(excursion,context)}"
      >
 
+
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/exc_image"
             android:layout_width="match_parent"

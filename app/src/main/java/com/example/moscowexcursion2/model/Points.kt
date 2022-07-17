@@ -5,6 +5,6 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Points(
-    val locations: Location,
-    val ordering: Int,
+    val locations: Location? = null,
+    val ordering: Int? = null,
 ): Parcelable

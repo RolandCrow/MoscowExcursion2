@@ -13,15 +13,16 @@ class ExcursionAdapter(private var routesData: List<Routes>): RecyclerView.Adapt
     class  ExcursionViewHolder(val binding: ExcursionRouteBinding): RecyclerView.ViewHolder(binding.root)
 
 
-    companion object: DiffUtil.ItemCallback<Data>(){
-        override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
-            return oldItem.id == newItem.id
-        }
+     companion object: DiffUtil.ItemCallback<Data>(){
+       override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
+           return oldItem.id == newItem.id
+       }
 
-        override fun areItemsTheSame(oldItem: Data, newItem: Data): Boolean {
-            return oldItem == newItem
-        }
-    }
+       override fun areItemsTheSame(oldItem: Data, newItem: Data): Boolean {
+           return oldItem == newItem
+       }
+   }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExcursionViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

@@ -10,7 +10,7 @@ data class Routes(
     val audio: String,
     val type: String,
     val points: List<Points>,
-    val textContents: List<TextContents>?,
+    val textContents: List<TextContents>,
     val media: List<Media>,
     val galleries: List<Galleries>,
-) : Parcelable
+): Parcelable

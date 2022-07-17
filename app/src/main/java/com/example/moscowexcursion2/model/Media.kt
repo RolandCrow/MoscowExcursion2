@@ -9,5 +9,5 @@ data class Media(
     val value: String,
     val ordering: Int,
     val type: String,
-    val caption: String,
+    val caption: String? = null,
 ): Parcelable

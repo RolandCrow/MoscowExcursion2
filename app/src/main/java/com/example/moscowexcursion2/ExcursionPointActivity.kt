@@ -9,7 +9,9 @@ import com.example.moscowexcursion2.adapters.ExcursionAdapter
 import com.example.moscowexcursion2.databinding.ActivityExcursionPointBinding
 import com.example.moscowexcursion2.model.Data
 import com.example.moscowexcursion2.util.Handler
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ExcursionPointActivity  : AppCompatActivity() {
 
     private lateinit var excursionAdapter: ExcursionAdapter
@@ -25,7 +27,7 @@ class ExcursionPointActivity  : AppCompatActivity() {
         setContentView(R.layout.activity_excursion_point)
 
         val myData = intent.getParcelableExtra<Parcelable>("data") as Data
-        binding.data = myData
+        binding.excursion = myData
 
         excursionAdapter = ExcursionAdapter(myData.routes)
         binding.adapter = excursionAdapter

@@ -14,7 +14,7 @@ class ExcursionPointAdapter(private var excursionListData: InfoExcursion): Recyc
     class ExcursionViewHolder(val binding: ExursionItemBinding): RecyclerView.ViewHolder(binding.root)
 
 
-    companion object: DiffUtil.ItemCallback<Data>(){
+   companion object: DiffUtil.ItemCallback<Data>(){
         override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
             return oldItem.id == newItem.id
         }

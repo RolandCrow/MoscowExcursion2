@@ -8,7 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.moscowexcursion2.databinding.ActivityExursionBinding
 import com.example.moscowexcursion2.model.Routes
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ExcursionActivity: AppCompatActivity() {
 
         private var counter = 0

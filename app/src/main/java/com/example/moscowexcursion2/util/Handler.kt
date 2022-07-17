@@ -10,7 +10,7 @@ import com.example.moscowexcursion2.model.Routes
 class Handler {
 
     fun onClick(data: Data, context: Context) {
-        val intent = Intent(context, ExcursionPointActivity::class.java)
+        val intent = Intent(context,ExcursionPointActivity::class.java)
         intent.putExtra("data", data)
         context.startActivity(intent)
     }
